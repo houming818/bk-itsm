@@ -20,7 +20,7 @@
 
 ## 打包并收集前端静态资源
 1）安装依赖包  
-进入 `frontend/weixin`，执行以下命令安装。如果您需要使用移动端的话，则需要在` frontend/weixin`执行相同的操作。
+进入 `frontend/pc`，执行以下命令安装。如果您需要使用移动端的话，则需要在` frontend/weixin`执行相同的操作。
 
 ```bash
 npm install
