@@ -14,6 +14,7 @@ django.pot
 
 frontend/pc/node_modules
 static/assets*
+staticfiles
 venv
 USERRES
 rule_engine
@@ -26,3 +27,4 @@ config/local_settings.py
 #blueapps/
 .codecc
 build.yml
+
