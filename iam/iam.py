@@ -25,7 +25,7 @@ from .auth.models import Request, MultiActionRequest, Resource, ApiAuthRequest
 from .exceptions import AuthAPIError, AuthInvalidRequest, AuthInvalidParam
 from .apply.models import Application
 
-logger = logging.getLogger("iam")
+logger = logging.getLogger("root")
 
 
 class IAM(object):
@@ -319,6 +319,8 @@ class IAM(object):
                 action = action_policy["action"]["id"]
                 policies = action_policy["condition"]
 
+                actions_allowed = self._eval_policy(policies, obj_set)
+                resources_actions_perms.setdefault(resource_id, {})[action] = actions_allowed
                 resources_actions_perms.setdefault(resource_id, {})[action] = False
                 resources_actions_perms[resource_id][action] = self._eval_policy(policies, obj_set)
 

@@ -51,7 +51,7 @@ RIO_TOKEN = os.environ.get("RIO_TOKEN", "")
 # logging.getLogger('root').setLevel('INFO')
 # V3
 # import logging
-# logging.getLogger('app').setLevel('INFO')
+# logging.getLogger('app').setLevel('DEBUG')
 
 
 # 预发布环境数据库可以在这里配置
@@ -103,3 +103,6 @@ if ENGINE_REGION == "default":
 BK_IAM_RESOURCE_API_HOST = os.getenv(
     "BKAPP_IAM_RESOURCE_API_HOST", urljoin(BK_PAAS_INNER_HOST, "/t/{}".format(APP_CODE))
 )
+
+import logging
+logging.getLogger('root').setLevel('DEBUG')

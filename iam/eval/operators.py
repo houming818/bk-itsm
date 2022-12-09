@@ -321,6 +321,8 @@ class StartsWithOperator(BinaryOperator):
         super(StartsWithOperator, self).__init__(OP.STARTS_WITH, field, value)
 
     def calculate(self, left, right):
+        if not left:
+            return False
         return left.startswith(right)
 
 

@@ -1,0 +1,9 @@
+
+# stag
+
+1. 编译推送
+docker build -t harbor.lotuscars.com.cn/bkce7/itsm:stag0 . && docker push harbor.lotuscars.com.cn/bkce7/itsm:stag0
+harbor.lotuscars.com.cn/bkce7/itsm:v2.6.2
+
+2. 变更stag版本
+kubectl -n bkapp-bk0us0itsm-stag edit deployments.apps bkapp-bk0us0itsm-stag--web
